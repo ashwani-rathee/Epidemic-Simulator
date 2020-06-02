@@ -16,46 +16,51 @@
     />
     <link rel="stylesheet" type="text/css" href="style.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script
+      type="text/javascript"
+      async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"
+    ></script>
   </head>
   <body>
     <!-- Image and text -->
-    <nav class="navbar navbar-dark bg-dark fixed-top">
-      <a class="navbar-brand" target="_blank">
-            <img src="assests/img/icons8-coronavirus-50.png">
+    <div>
+      <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" target="_blank">
+          <img src="assests/img/icons8-coronavirus-50.png" />
         </a>
-      <a class="navbar-brand" href="#">
-        Epidemic Simulator
-      </a>
-    </nav>
-    <div class="row outer">
-      <div class="col-sm-4 inner">
-        <div class="innerinner">
-          <h3><u>SIR MODEL<u><h3>
-          <p>
-            SIR model is an epidemiological model that computes the theoretical
-            number of people infected with a contagious illness in a closed population over time.
-          </p>
-          <p>
-          $$
-          {\displaystyle {\begin{aligned}&{\frac {dS}{dt}}=-{\frac {\beta IS}{N}},\\
-          [6pt]&{\frac {dI}{dt}}={\frac {\beta IS}{N}}-\gamma I,\\
-          [6pt]&{\frac {dR}{dt}}=\gamma I,\end{aligned}}}
-          $$
-          </p>
-          Link:
-          <a href="SIRmodel.html">SIR model</a>
-        </div>
-        <div class="innerinner">
-          <div class="container">
-            <div class="cont"></div>
-            <div class="cont"></div>
-            <div class="cont"></div>
+        <a class="navbar-brand" href="#">
+          Epidemic Simulator
+        </a>
+      </nav>
+      <div class="row outer">
+        <div class="col-sm-4 inner">
+          <div class="innerinner">
+            <!-- <h6><u>SIR MODEL<u><h6> -->
+            <p>
+              SIR model is an epidemiological model that computes the
+              theoretical number of people infected with a contagious illness in
+              a closed population over time.
+            </p>
+            <p>
+              $$ {\displaystyle {\begin{aligned}&{\frac {dS}{dt}}=-{\frac {\beta
+              IS}{N}},\\ [6pt]&{\frac {dI}{dt}}={\frac {\beta IS}{N}}-\gamma
+              I,\\ [6pt]&{\frac {dR}{dt}}=\gamma I,\end{aligned}}} $$
+            </p>
+            <strong>Link: <a href="SIRModel.html">SIR model</a></strong>
+          </div>
+          <div class="innerinner">
+            <div class="container">
+              <div class="cont"></div>
+              <div class="cont"></div>
+              <div class="cont"></div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-sm-8 inner">
-        <div class="chart-container">
-          <canvas id="chart1"></canvas>
+        <div class="col-sm-8 inner">
+          <div class="chart-container">
+            <canvas id="chart1"></canvas>
+          </div>
         </div>
       </div>
     </div>
