@@ -7,6 +7,7 @@
       name="description"
       content="An Interactive Epidemic Simulator for Various Models"
     />
+    <link rel="icon" href="assests/img/icons8-coronavirus-50.png" />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
@@ -19,13 +20,31 @@
   <body>
     <!-- Image and text -->
     <nav class="navbar navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" target="_blank">
+            <img src="assests/img/icons8-coronavirus-50.png">
+        </a>
       <a class="navbar-brand" href="#">
         Epidemic Simulator
       </a>
     </nav>
     <div class="row outer">
       <div class="col-sm-4 inner">
-        <div class="innerinner"></div>
+        <div class="innerinner">
+          <h3><u>SIR MODEL<u><h3>
+          <p>
+            SIR model is an epidemiological model that computes the theoretical
+            number of people infected with a contagious illness in a closed population over time.
+          </p>
+          <p>
+          $$
+          {\displaystyle {\begin{aligned}&{\frac {dS}{dt}}=-{\frac {\beta IS}{N}},\\
+          [6pt]&{\frac {dI}{dt}}={\frac {\beta IS}{N}}-\gamma I,\\
+          [6pt]&{\frac {dR}{dt}}=\gamma I,\end{aligned}}}
+          $$
+          </p>
+          Link:
+          <a href="SIRmodel.html">SIR model</a>
+        </div>
         <div class="innerinner">
           <div class="container">
             <div class="cont"></div>
