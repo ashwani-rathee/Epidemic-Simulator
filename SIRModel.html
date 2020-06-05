@@ -5,6 +5,7 @@
 SIR MODEL
 </title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="assests/img/icons8-coronavirus-50.png" />
 <style>
 body {
   font-family: "Lato", sans-serif;
@@ -25,7 +26,7 @@ body {
 .sidenav a {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 16px;
   color: #818181;
   display: block;
 }
@@ -36,7 +37,7 @@ body {
 
 .main {
   margin-left: 160px; /* Same as the width of the sidenav */
-  font-size: 28px; /* Increased text to enable scrolling */
+  font-size: 14px; /* Increased text to enable scrolling */
   padding: 0px 10px;
 }
 
@@ -54,16 +55,15 @@ body {
 <body>
 
 <div class="sidenav">
-  <a href="#about">SIR MODEL</a>
-  <a href="#services">SEIR MODEL</a>
+  <a href="SIRModel.html">SIR MODEL</a>
+  <a href="SEIRModel.html">SEIR MODEL</a>
   <a href="#clients">MSIR MODEL</a>
-  <a href="#contact">HOME</a>
+  <a href="index.html">Index</a>
 </div>
 
 <div class="main">
   <h2>SIR MODEL</h2>
-  <br>
-  <h2><u>Description</u><h2>
+  <h2><u>Description</u></h2>
       <p>Most simple compartmental models and many other models come from this one</p>
       <p>The model has 3 compartments:</p>
       <p>1)S for number of susceptible,I for infectious and 
@@ -74,98 +74,15 @@ body {
       <p>4)these 3 variables vary with time..</p>
       <p>5)each member of population progressess from susceptible to infected to recovered</p>
   <br>
-  <h2><u>Latex code for Equations</u><h2>
-  <p>latex code for equations
-     $$
-     {\displaystyle {\begin{aligned}&{\frac {dS}{dt}}=-{\frac {\beta IS}{N}},\\
-     [6pt]&{\frac {dI}{dt}}={\frac {\beta IS}{N}}-\gamma I,\\
-     [6pt]&{\frac {dR}{dt}}=\gamma I,\end{aligned}}}
-     $$
-  </p>
+  <h2><u>Equations without Vital Dynamics</u><h2>
   <p>
-     /Code in Javascipt
-
-//SIR With out vital dynamics
-const rk4 = require("ode-rk4");
-function copy(x) {
-  return Object.assign({},x)
-}
-function simulate(f,t0,y0,step,tmax) {
-  var integrator = rk4(y0, f, t0, step)
-  var t = t0
-  var y = y0
-  var ta = []
-  var ya = []
-  ta.push(t0)
-  ya.push(copy(y))
-  while(true){
-    t = t+step
-    if(t>tmax) break
-    integrator=integrator.step()
-    ya.push(copy(integrator.y))
-    ta.push(t)
-  }
-  return {t:ta,y:ya};
-}
-function sir(dydt, y, t) {
-  dydt[0] = -b*y[0]*y[1];
-  dydt[1] = b*y[0]*y[1] - g*y[1];
-  dydt[2] = g*y[1];
-}
-
-const b=0.1;
-const g=0.05;
-const I0=0.01;
-const step=0.1;
-const tmax=200.0;
-
-var sir_sol = simulate(sir,0,[1.0-I0,I0,0.0],step,tmax)
-
-var t = sir_sol.t;
-var S = sir_sol.y.map((x)=>{return x[0]});
-var I = sir_sol.y.map((x)=>{return x[1]});
-var R = sir_sol.y.map((x)=>{return x[2]});
-var strace = {
-    type: "scatter",
-    mode: "step",
-    name: 'S',
-    x: t,
-    y: S,
-    line: {color: 'blue'}
-}
-var itrace = {
-    type: "scatter",
-    mode: "step",
-    name: 'I',
-    x: t,
-    y: I,
-    line: {color: 'red'}
-}
-var rtrace = {
-    type: "scatter",
-    mode: "step",
-    name: 'R',
-    x: t,
-    y: R,
-    line: {color: 'green'}
-}
-  var data = [strace,itrace,rtrace];
-
-  var layout = {
-    title: 'SIR model without vital dynamics',
-    xaxis: {
-    title: 'Time',
-    titlefont: {
-      size: 18,
-    }
-    },
-    yaxis: {
-    title: 'Number',
-    titlefont: {
-      size: 18,
-    }
-  }}
+     $$
+       {\displaystyle {\begin{aligned}&{\frac {dS}{dt}}=-{\frac {\beta IS}{N}},\\
+       {\frac {dI}{dt}}={\frac {\beta IS}{N}}-\gamma I,\\
+       {\frac {dR}{dt}}=\gamma I,\end{aligned}}}
+     $$
   </p>
+  <img src="assests/img/1.png" alt="SIRModel" style="width:800px;height:500px;">
 </div>
    
 </body>
