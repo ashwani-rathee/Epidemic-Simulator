@@ -1,6 +1,9 @@
 PROJECT: EPIDEMIC SIMULATOR
+
 TEAM:
+
 Atul Thakur
+
 Ashwani Rathee
 
 The idea is to implement the various epidemic models and make them as interactive as it is possible
