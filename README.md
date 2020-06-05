@@ -5,9 +5,10 @@
   <li>Atul Thakur</li>
   <li>Ashwani Rathee</li>
 </ul>
-The idea is to implement the various epidemic models and make them as interactive as it is possible
 
-Resources:
+<p>The idea is to implement the various epidemic models and make them as interactive as it is possible</p>
+
+</h2></u>Resources:</u></h2>
 <ul>
 <li>http://gabgoh.github.io/COVID/index.html</li>
 <li>http://outbreak-simulator.com/</li>
@@ -17,8 +18,9 @@ Resources:
 <li>https://holko.pl/epidemic-simulation/</li>
 <li>https://www.washingtonpost.com/graphics/2020/world/corona-simulator/</li>
 <li>https://meltingasphalt.com/outbreak/</li>
-
-Contact:
+<ul>
+  
+<h2><u>Contact:</u></h2>
 <ul>
   <li>Ashwani-     ab669522@gmail.com</li>
   <li>Atul-</li>
