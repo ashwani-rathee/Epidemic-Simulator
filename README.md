@@ -1,37 +1,25 @@
-## Welcome to GitHub Pages
+PROJECT: EPIDEMIC SIMULATOR
+TEAM:
+Atul Thakur
+Ashwani Rathee
 
-You can use the [editor on GitHub](https://github.com/ashwani-rathee/Epidemic-Simulator/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+The idea is to implement the various epidemic models and make them as interactive as it is possible
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Resources:
+http://gabgoh.github.io/COVID/index.html
+http://outbreak-simulator.com/
+https://tachyondecay.github.io/epidemic-simulator/
+https://adewes.github.io/epidemic/
+https://prajwalsouza.github.io/Experiments/Epidemic-Simulation.html
+https://holko.pl/epidemic-simulation/
+https://www.washingtonpost.com/graphics/2020/world/corona-simulator/
+https://meltingasphalt.com/outbreak/
 
-### Markdown
+Contact:
+Ashwani-     ab669522@gmail.com
+Atul-        
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Further Work:
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ashwani-rathee/Epidemic-Simulator/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
