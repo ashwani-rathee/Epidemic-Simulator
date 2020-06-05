@@ -5,6 +5,12 @@
 SIR MODEL
 </title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="assests/img/icons8-coronavirus-50.png" />
+  <script
+      type="text/javascript"
+      async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"
+    ></script>
 <style>
 body {
   font-family: "Lato", sans-serif;
@@ -25,7 +31,7 @@ body {
 .sidenav a {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 16px;
   color: #818181;
   display: block;
 }
@@ -36,7 +42,7 @@ body {
 
 .main {
   margin-left: 160px; /* Same as the width of the sidenav */
-  font-size: 28px; /* Increased text to enable scrolling */
+  font-size: 14px; /* Increased text to enable scrolling */
   padding: 0px 10px;
 }
 
@@ -49,10 +55,10 @@ body {
 <body>
 
 <div class="sidenav">
-  <a href="#about">SIR MODEL</a>
-  <a href="#services">SEIR MODEL</a>
+  <a href="SIRModel.html">SIR MODEL</a>
+  <a href="SEIRModel.html">SEIR MODEL</a>
   <a href="#clients">MSIR MODEL</a>
-  <a href="#contact">HOME</a>
+  <a href="index.html">HOME</a>
 </div>
 
 <div class="main">
@@ -65,32 +71,39 @@ body {
      Assuming that the incubation period is a random variable with exponential distribution with parameter
     {\displaystyle a}a (i.e. the average incubation period is {\displaystyle a^{-1}}a^{-1}), 
     and also assuming the presence of vital dynamics with birth rate {\displaystyle \Lambda }\Lambda  equal to death rate
-    {\displaystyle \mu }\mu , we have the model:
+    $${\displaystyle \mu }\mu$$ , we have the model:
   </p>
   <p>
-  {\displaystyle {\begin{aligned}{\frac {dS}{dt}}&=\mu N-\mu S-\beta {\frac {I}{N}}S\\[8pt]{\frac {dE}{dt}}&=\beta {\frac {I}{N}}S-(\mu +a)E\\[8pt]{\frac {dI}{dt}}&=aE-(\gamma +\mu )I\\[8pt]{\frac {dR}{dt}}&=\gamma I-\mu R.\end{aligned}}}{\displaystyle {\begin{aligned}{\frac {dS}{dt}}&=\mu N-\mu S-\beta {\frac {I}{N}}S\\[8pt]{\frac {dE}{dt}}&=\beta {\frac {I}{N}}S-(\mu +a)E\\[8pt]{\frac {dI}{dt}}&=aE-(\gamma +\mu )I\\[8pt]{\frac {dR}{dt}}&=\gamma I-\mu R.\end{aligned}}}
+  
+  $${\displaystyle {\begin{aligned}{\frac {dS}{dt}}&=\mu N-\mu S-\beta {\frac {I}{N}}S\\[8pt]{\frac {dE}{dt}}&=\beta {\frac {I}{N}}S-(\mu +a)E\\[8pt]{\frac {dI}{dt}}&=aE-(\gamma +\mu )I\\[8pt]{\frac {dR}{dt}}&=\gamma I-\mu R.\end{aligned}}}$$
   We have {\displaystyle S+E+I+R=N,}{\displaystyle S+E+I+R=N,} but this is only constant because of the (degenerate) assumption
   that birth and death rates are equal; in general {\displaystyle N}N is a variable.
   </p>
+  
   <p>
      For this model, the basic reproduction number is:
      {\displaystyle R_{0}={\frac {a}{\mu +a}}{\frac {\beta }{\mu +\gamma }}.}R_{0}={\frac  {a}{\mu +a}}{\frac  {\beta }{\mu +\gamma }}.
      Similarly to the SIR model, also, in this case, we have a Disease-Free-Equilibrium (N,0,0,0) and an Endemic Equilibrium EE, 
      and one can show that, independently from biologically meaningful initial conditions
   </p>
+  
   <p>
-    {\displaystyle \left(S(0),E(0),I(0),R(0)\right)\in \left\{(S,E,I,R)\in [0,N]^{4}:S\geq 0,E\geq 0,I\geq 0,R\geq 0,S+E+I+R=N\right\}}\left(S(0),E(0),I(0),R(0)\right)\in \left\{(S,E,I,R)\in [0,N]^{4}:S\geq 0,E\geq 0,I\geq 0,R\geq 0,S+E+I+R=N\right\}
+    $${\displaystyle \left(S(0),E(0),I(0),R(0)\right)\in \left\{(S,E,I,R)\in [0,N]^{4}:S\geq 0,E\geq 0,I\geq 0,R\geq 0,S+E+I+R=N\right\}}\left(S(0),E(0),I(0),R(0)\right)\in \left\{(S,E,I,R)\in [0,N]^{4}:S\geq 0,E\geq 0,I\geq 0,R\geq 0,S+E+I+R=N\right\}$$
+	
     it holds that:
   </p>
+  
   <p>
-    {\displaystyle R_{0}\leq 1\Rightarrow \lim _{t\to +\infty }\left(S(t),E(t),I(t),R(t)\right)=DFE=(N,0,0,0),}{\displaystyle R_{0}\leq 1\Rightarrow \lim _{t\to +\infty }\left(S(t),E(t),I(t),R(t)\right)=DFE=(N,0,0,0),}
-    {\displaystyle R_{0}>1,I(0)>0\Rightarrow \lim _{t\to +\infty }\left(S(t),E(t),I(t),R(t)\right)=EE.}{\displaystyle R_{0}>1,I(0)>0\Rightarrow \lim _{t\to +\infty }\left(S(t),E(t),I(t),R(t)\right)=EE.}
-    In case of periodically varying contact rate {\displaystyle \beta (t)}\beta (t) the condition for the global attractiveness of DFE is that the following linear system with periodic coefficients:
+    $${\displaystyle R_{0}\leq 1\Rightarrow \lim _{t\to +\infty }\left(S(t),E(t),I(t),R(t)\right)=DFE=(N,0,0,0),}{\displaystyle R_{0}\leq 1\Rightarrow \lim _{t\to +\infty }\left(S(t),E(t),I(t),R(t)\right)=DFE=(N,0,0,0),}$$
+    $${\displaystyle R_{0}>1,I(0)>0\Rightarrow \lim _{t\to +\infty }\left(S(t),E(t),I(t),R(t)\right)=EE.}{\displaystyle R_{0}>1,I(0)>0\Rightarrow \lim _{t\to +\infty }\left(S(t),E(t),I(t),R(t)\right)=EE.}$$
+    In case of periodically varying contact rate $${\displaystyle \beta (t)}\beta (t)$$ the condition for the global attractiveness of DFE is that the following linear system with periodic coefficients:
   </p>
+  
   <p>
-    {\displaystyle {\begin{aligned}{\frac {dE_{1}}{dt}}&=\beta (t)I_{1}-(\gamma +a)E_{1}\\[8pt]{\frac {dI_{1}}{dt}}&=aE_{1}-(\gamma +\mu )I_{1}\end{aligned}}}{\displaystyle {\begin{aligned}{\frac {dE_{1}}{dt}}&=\beta (t)I_{1}-(\gamma +a)E_{1}\\[8pt]{\frac {dI_{1}}{dt}}&=aE_{1}-(\gamma +\mu )I_{1}\end{aligned}}}
+    $${\displaystyle {\begin{aligned}{\frac {dE_{1}}{dt}}&=\beta (t)I_{1}-(\gamma +a)E_{1}\\[8pt]{\frac {dI_{1}}{dt}}&=aE_{1}-(\gamma +\mu )I_{1}\end{aligned}}}{\displaystyle {\begin{aligned}{\frac {dE_{1}}{dt}}&=\beta (t)I_{1}-(\gamma +a)E_{1}\\[8pt]{\frac {dI_{1}}{dt}}&=aE_{1}-(\gamma +\mu )I_{1}\end{aligned}}}$$
     is stable (i.e. it has its Floquet's eigenvalues inside the unit circle in the complex plane).
   </p>
+  <img src="assests/img/SEIR.png" 
   </div>
 </body>
 </html> 
