@@ -1,28 +1,30 @@
-PROJECT: EPIDEMIC SIMULATOR
+<h1><u>PROJECT: EPIDEMIC SIMULATOR<u></h1>
 
-TEAM:
-
-Atul Thakur
-
-Ashwani Rathee
-
+<p>TEAM:</p>
+<ul>
+  <li>Atul Thakur</li>
+  <li>Ashwani Rathee</li>
+</ul>
 The idea is to implement the various epidemic models and make them as interactive as it is possible
 
 Resources:
-http://gabgoh.github.io/COVID/index.html
-http://outbreak-simulator.com/
-https://tachyondecay.github.io/epidemic-simulator/
-https://adewes.github.io/epidemic/
-https://prajwalsouza.github.io/Experiments/Epidemic-Simulation.html
-https://holko.pl/epidemic-simulation/
-https://www.washingtonpost.com/graphics/2020/world/corona-simulator/
-https://meltingasphalt.com/outbreak/
+<ul>
+<li>http://gabgoh.github.io/COVID/index.html</li>
+<li>http://outbreak-simulator.com/</li>
+<li>https://tachyondecay.github.io/epidemic-simulator/</li>
+<li>https://adewes.github.io/epidemic/</li>
+<li>https://prajwalsouza.github.io/Experiments/Epidemic-Simulation.html</li>
+<li>https://holko.pl/epidemic-simulation/</li>
+<li>https://www.washingtonpost.com/graphics/2020/world/corona-simulator/</li>
+<li>https://meltingasphalt.com/outbreak/</li>
 
 Contact:
-Ashwani-     ab669522@gmail.com
-Atul-        
+<ul>
+  <li>Ashwani-     ab669522@gmail.com</li>
+  <li>Atul-</li>
+</ul>
 
-Further Work:
+<p>Further Work:</p>
 
 
 
