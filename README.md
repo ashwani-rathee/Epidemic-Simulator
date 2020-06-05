@@ -8,7 +8,7 @@
 
 <p>The idea is to implement the various epidemic models and make them as interactive as it is possible</p>
 
-</h2></u>Resources:</u></h2>
+<h2><u>Resources:</u></h2>
 <ul>
 <li>http://gabgoh.github.io/COVID/index.html</li>
 <li>http://outbreak-simulator.com/</li>
@@ -18,7 +18,7 @@
 <li>https://holko.pl/epidemic-simulation/</li>
 <li>https://www.washingtonpost.com/graphics/2020/world/corona-simulator/</li>
 <li>https://meltingasphalt.com/outbreak/</li>
-<ul>
+</ul>
   
 <h2><u>Contact:</u></h2>
 <ul>
