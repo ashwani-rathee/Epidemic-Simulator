@@ -43,12 +43,12 @@ var chart1 = new Chart(ctx, {
       },
       {
         label: "Infected",
-        borderColor: "red",
+        borderColor: "rgb(235, 89, 52)",
         data: obj.Infected,
       },
       {
         label: "Recovered",
-        borderColor: "green",
+        borderColor: "rgb(143, 235, 52)",
         data: obj.Recovered,
       },
     ],
