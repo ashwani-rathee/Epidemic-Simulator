@@ -24,7 +24,7 @@
   </head>
   <body>
     <!-- Image and text -->
-    <div>
+    <div class="home">
       <nav class="navbar navbar-dark bg-dark">
         <a class="navbar-brand" target="_blank">
           <img src="assests/img/icons8-coronavirus-50.png" />
@@ -33,69 +33,169 @@
           Epidemic Simulator
         </a>
       </nav>
-      <div class="row outer">
-        <div class="col-sm-4 inner">
-          <div class="innerinner">
-            <!-- <h6><u>SIR MODEL<u><h6> -->
-            <p>
-              SIR model is an epidemiological model that computes the
-              theoretical number of people infected with a contagious illness in
-              a closed population over time.
-            </p>
-            <p>
-              $$ {\displaystyle {\begin{aligned}&{\frac {dS}{dt}}=-{\frac {\beta
-              IS}{N}},\\ [6pt]&{\frac {dI}{dt}}={\frac {\beta IS}{N}}-\gamma
-              I,\\ [6pt]&{\frac {dR}{dt}}=\gamma I,\end{aligned}}} $$
-            </p>
-            <strong>Link: <a href="SIRModel.html">SIR model</a></strong>
+      <div class="body">
+        <div class="layer1">
+          <div class="layer1-head">
+            <h1>SIR Model</h1>
           </div>
-          <div class="innerinner">
-            <div class="container">
-              <div class="cont">
-                <div class="slidecontainer">
-                  <input
-                    type="range"
-                    min="1"
-                    max="100"
-                    value="50"
-                    class="slider"
-                    id="myRange"
-                  />
-                </div>
-                <h6>0-100% what is this value</h6>
+          <div class="row layer1-body">
+            <div class="col-sm-4 layer1-left">
+              <div class="layer1-text">
+                <!-- <h6><u>SIR MODEL<u><h6> -->
+                <p>
+                  SIR model is an epidemiological model that computes the
+                  theoretical number of people infected with a contagious
+                  illness in a closed population over time.
+                </p>
+                <p>
+                  $$ {\displaystyle {\begin{aligned}&{\frac {dS}{dt}}=-{\frac
+                  {\beta IS}{N}},\\ [6pt]&{\frac {dI}{dt}}={\frac {\beta
+                  IS}{N}}-\gamma I,\\ [6pt]&{\frac {dR}{dt}}=\gamma
+                  I,\end{aligned}}} $$
+                </p>
+                <strong>Link: <a href="SIRModel.html">SIR model</a></strong>
               </div>
-              <div class="cont">
-                <div class="slidecontainer">
-                  <input
-                    type="range"
-                    min="1"
-                    max="100"
-                    value="50"
-                    class="slider"
-                    id="myRange"
-                  />
+              <div class="layer1-sliders">
+                <div class="container">
+                  <div class="cont">
+                    <div class="slidecontainer">
+                      <input
+                        type="range"
+                        min="1"
+                        max="100"
+                        value="50"
+                        class="slider"
+                        id="beta"
+                      />
+                    </div>
+                    <h6>
+                      Infection Rate:-
+                      <span id="layer1-infectionrate"></span>
+                    </h6>
+                  </div>
+                  <div class="cont">
+                    <div class="slidecontainer">
+                      <input
+                        type="range"
+                        min="1"
+                        max="100"
+                        value="50"
+                        class="slider"
+                        id="gamma"
+                      />
+                    </div>
+                    <h6>
+                      Recovery Rate:- <span id="layer1-recoveryrate"></span>
+                    </h6>
+                  </div>
+                  <div class="cont">
+                    <div class="slidecontainer">
+                      <input
+                        type="range"
+                        min="1"
+                        max="100"
+                        value="50"
+                        class="slider"
+                        id="totalPop"
+                      />
+                    </div>
+                    <h6>Population:- <span id="layer1-population"></span></h6>
+                  </div>
                 </div>
-                <h6>0-100% what is this value</h6>
               </div>
-              <div class="cont">
-                <div class="slidecontainer">
-                  <input
-                    type="range"
-                    min="1"
-                    max="100"
-                    value="50"
-                    class="slider"
-                    id="myRange"
-                  />
-                </div>
-                <h6>0-100% what is this value</h6>
+            </div>
+            <div class="col-sm-8 layer1-right">
+              <div class="chart-container">
+                <canvas id="chart1"></canvas>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-sm-8 inner">
-          <div class="chart-container">
-            <canvas id="chart1"></canvas>
+        <div class="layer2">
+          <div class="layer2-head">
+            <h1>SEIR Model</h1>
+          </div>
+          <div class="layer2-body row">
+            <div class="col-sm-4 layer2-left">
+              <div class="layer2-text">
+                <!-- <h6><u>SIR MODEL<u><h6> -->
+                <p>
+                  SIR model is an epidemiological model that computes the
+                  theoretical number of people infected with a contagious
+                  illness in a closed population over time.
+                </p>
+                <p>
+                  $$ {\displaystyle {\begin{aligned}&{\frac {dS}{dt}}=-{\frac
+                  {\beta IS}{N}},\\ [6pt]&{\frac {dI}{dt}}={\frac {\beta
+                  IS}{N}}-\gamma I,\\ [6pt]&{\frac {dR}{dt}}=\gamma
+                  I,\end{aligned}}} $$
+                </p>
+                <strong>Link: <a href="SIRModel.html">SIR model</a></strong>
+              </div>
+              <div class="layer2-sliders">
+                <div class="container">
+                  <div class="cont">
+                    <div class="slidecontainer">
+                      <input
+                        type="range"
+                        min="1"
+                        max="100"
+                        value="50"
+                        class="slider"
+                        id="layer2beta"
+                      />
+                    </div>
+                    <h6>Exposure Rate:- <span id="layer2-exposure"></span></h6>
+                  </div>
+                  <div class="cont">
+                    <div class="slidecontainer">
+                      <input
+                        type="range"
+                        min="1"
+                        max="100"
+                        value="50"
+                        class="slider"
+                        id="layer2gamma"
+                      />
+                    </div>
+                    <h6>Recovery Rate:- <span id="layer2-recovery"></span></h6>
+                  </div>
+                  <div class="cont">
+                    <div class="slidecontainer">
+                      <input
+                        type="range"
+                        min="1"
+                        max="100"
+                        value="20"
+                        class="slider"
+                        id="layer2mue"
+                      />
+                    </div>
+                    <h6>Death Rate:- <span id="layer2-death"></span></h6>
+                  </div>
+                  <div class="cont">
+                    <div class="slidecontainer">
+                      <input
+                        type="range"
+                        min="1"
+                        max="100"
+                        value="50"
+                        class="slider"
+                        id="layer2alpha"
+                      />
+                    </div>
+                    <h6>
+                      Infection Rate:- <span id="layer2-infection"></span>
+                    </h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-8 layer2-right">
+              <div class="chart-container">
+                <canvas id="chart2"></canvas>
+              </div>
+            </div>
           </div>
         </div>
       </div>

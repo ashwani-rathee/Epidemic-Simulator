@@ -1,15 +1,77 @@
-.outer {
-  height: 560px;
+.body {
+  height: 1150px;
   margin: auto;
+  width: 100%;
 }
 
-.inner {
-  padding: 0;
+.layer1-head {
+  /* border: 2px dotted red; */
+  text-align: center;
+}
+
+.layer1 {
+  height: 50%;
+  margin: auto;
   border: 2px solid grey;
 }
 
-.innerinner {
-  border: 2px solid pink;
+.layer1-body {
+  height: 100%;
+}
+.layer2 {
+  height: 50%;
+  margin: auto;
+  border: 2px solid grey;
+}
+.layer2-body {
+  height: 100%;
+}
+
+.layer2-head {
+  /* border: 2px dotted red; */
+  text-align: center;
+}
+
+.layer1-left {
+  /* padding: 0; */
+  /* border: 2px solid grey; */
+}
+
+.layer1-right {
+  /* padding: 0; */
+  /* border: 2px solid grey; */
+}
+
+.layer1-text {
+  /* border: 2px solid grey; */
+  height: 50%;
+  width: 100%;
+}
+
+.layer1-sliders {
+  /* border: 2px solid grey; */
+  height: 50%;
+  width: 100%;
+}
+
+.layer2-left {
+  /* padding: 0; */
+  /* border: 2px solid grey; */
+}
+
+.layer2-right {
+  /* padding: 0; */
+  /* border: 2px solid grey; */
+}
+
+.layer2-text {
+  /* border: 2px solid grey; */
+  height: 50%;
+  width: 100%;
+}
+
+.layer2-sliders {
+  /* border: 2px solid grey; */
   height: 50%;
   width: 100%;
 }
@@ -22,7 +84,7 @@ canvas {
 .container {
   text-align: center;
   padding: 0%;
-  height: 85%;
+  /* height: 85%; */
   width: 85%;
   margin: auto;
   margin-top: 5%;
@@ -39,6 +101,7 @@ canvas {
   height: 100%;
   width: 100%;
 }
+
 .slider {
   -webkit-appearance: none;
   width: 100%;
