@@ -26,6 +26,10 @@
   <li>Atul-</li>
 </ul>
 
+Website is visible at:
+ashwani-rathee.github.io/Epidemic-SImulator/
+https://atul1837.github.io/covid/
+
 <p>Further Work:</p>
 
 
