@@ -27,8 +27,8 @@
 </ul>
 
 Website is visible at:
-https://ashwani-rathee.github.io/Epidemic-SImulator/
-https://atul1837.github.io/covid/
+<a href="https://ashwani-rathee.github.io/Epidemic-Simulator/">On Ashwani's Website</a>
+<a href="https://atul1837.github.io/covid/">On Atul's Website</a>
 
 <p>Further Work:</p>
 
