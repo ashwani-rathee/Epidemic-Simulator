@@ -1,5 +1,5 @@
 .body {
-  height: 1150px;
+  height: 1450px;
   margin: auto;
   width: 100%;
 }
@@ -10,7 +10,7 @@
 }
 
 .layer1 {
-  height: 50%;
+  height: 40%;
   margin: auto;
   border: 2px solid grey;
 }
@@ -19,7 +19,7 @@
   height: 100%;
 }
 .layer2 {
-  height: 50%;
+  height: 60%;
   margin: auto;
   border: 2px solid grey;
 }
@@ -66,13 +66,13 @@
 
 .layer2-text {
   /* border: 2px solid grey; */
-  height: 50%;
+  height: 65%;
   width: 100%;
 }
 
 .layer2-sliders {
   /* border: 2px solid grey; */
-  height: 50%;
+  height: 35%;
   width: 100%;
 }
 
