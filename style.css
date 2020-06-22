@@ -40,6 +40,7 @@
 .layer1-right {
   /* padding: 0; */
   /* border: 2px solid grey; */
+  height: 100%;
 }
 
 .layer1-text {
@@ -62,6 +63,7 @@
 .layer2-right {
   /* padding: 0; */
   /* border: 2px solid grey; */
+  height: 100%;
 }
 
 .layer2-text {
@@ -94,12 +96,28 @@ canvas {
   width: 100%;
 }
 
+.layer2-sliders .cont {
+  height: 25%;
+}
+
 .chart-container {
   padding: 20px;
   position: relative;
   margin: auto;
   height: 100%;
   width: 100%;
+}
+
+#chart1 {
+  height: 100%;
+}
+
+#chart2 {
+  height: 100%;
+}
+
+.layer2-right .chart-container {
+  padding-top: 25%;
 }
 
 .slider {
