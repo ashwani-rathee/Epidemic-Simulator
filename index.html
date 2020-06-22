@@ -33,6 +33,9 @@
           Epidemic Simulator
         </a>
       </nav>
+      <div class="tracker text-center">
+        <a href="./tracker.html"> Covid Live Tracker</a>
+      </div>
       <div class="body">
         <div class="layer1">
           <div class="layer1-head">
@@ -42,7 +45,9 @@
             <div class="col-sm-4 layer1-left">
               <div class="layer1-text">
                 <!-- <h6><u>SIR MODEL<u><h6> -->
-                <h2><u><center>SIR Model</center></u></h2>
+                <h2>
+                  <u><center>SIR Model</center></u>
+                </h2>
                 <p>
                   SIR model is an epidemiological model that computes the
                   theoretical number of people infected with a contagious
@@ -120,20 +125,26 @@
             <div class="col-sm-4 layer2-left">
               <div class="layer2-text">
                 <!-- <h6><u>SIR MODEL<u><h6> -->
-                <h2><u><center>SEIR Model</center></u></h2>
+                <h2>
+                  <u><center>SEIR Model</center></u>
+                </h2>
                 <p>
-                  The SEIR model assumes people carry lifelong immunity to a disease upon recovery,
-                  but for many diseases the immunity after infection wanes over time. In this case,
-                  the SEIRS model is used to allow recovered individuals to return to a susceptible state.
-                  Specifically, \xi is the rate which recovered individuals return to the susceptible statue due to loss of immunity.
-                  If there is sufficient influx to the susceptible population,
-                  at equilibrium the dynamics will be in an endemic state with damped oscillation. 
+                  The SEIR model assumes people carry lifelong immunity to a
+                  disease upon recovery, but for many diseases the immunity
+                  after infection wanes over time. In this case, the SEIRS model
+                  is used to allow recovered individuals to return to a
+                  susceptible state. Specifically, \xi is the rate which
+                  recovered individuals return to the susceptible statue due to
+                  loss of immunity. If there is sufficient influx to the
+                  susceptible population, at equilibrium the dynamics will be in
+                  an endemic state with damped oscillation.
                 </p>
                 <p>
-                  $$ {\displaystyle {\begin{aligned}{\frac {dS}{dt}}&amp;
-                  =\mu N-\mu S-\beta {\frac {I}{N}}S\\[8pt]{\frac {dE}{dt}}&amp;
+                  $$ {\displaystyle {\begin{aligned}{\frac {dS}{dt}}&amp; =\mu
+                  N-\mu S-\beta {\frac {I}{N}}S\\[8pt]{\frac {dE}{dt}}&amp;
                   =\beta {\frac {I}{N}}S-(\mu +a)E\\[8pt]{\frac {dI}{dt}}&amp;
-                  =aE-(\gamma +\mu )I\\[8pt]{\frac {dR}{dt}}&amp;=\gamma I-\mu R.\end{aligned}}} $$
+                  =aE-(\gamma +\mu )I\\[8pt]{\frac {dR}{dt}}&amp;=\gamma I-\mu
+                  R.\end{aligned}}} $$
                 </p>
                 <strong>Link: <a href="SEIRModel.html">SEIR model</a></strong>
               </div>

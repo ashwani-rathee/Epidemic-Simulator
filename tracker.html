@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Covid-Tracker</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="tracker.css" />
+  </head>
+  <body>
+    <div class="tracker pt-4 rounded container">
+      <div class="layer0 jumbotron text-center">
+        <h1>COVID-TRACKER</h1>
+      </div>
+      <div class="layer1 text-center">
+        <select
+          name="select-country"
+          id="select-country"
+          onchange="select();"
+        ></select>
+      </div>
+      <div class="layer2 text-center">
+        <div class="last-updated">
+          <span class="last-updated"></span>
+        </div>
+      </div>
+      <div class="layer3 text-center">
+        <div class="data row">
+          <div class="col-md-2"></div>
+          <div class="total col-md-3 card py-3">
+            <h4>Total Confirmed Cases</h4>
+            <span id="total"></span>
+          </div>
+          <div class="col-md-2"></div>
+          <div class="active col-md-3 card py-3">
+            <h4>Total Active Cases</h4>
+            <span id="active"></span>
+          </div>
+          <div class="col-md-2"></div>
+        </div>
+        <div class="data row">
+          <div class="col-md-2"></div>
+          <div class="recovered col-md-3 card py-3">
+            <h4>Total Recovered Cases</h4>
+            <span id="recovered"></span>
+          </div>
+          <div class="col-md-2"></div>
+          <div class="dead col-md-3 card py-3">
+            <h4>Total Dead</h4>
+            <span id="dead"></span>
+          </div>
+          <div class="col-md-2"></div>
+        </div>
+      </div>
+      <div class="layer4"></div>
+    </div>
+
+    <!-- script tags -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script src="tracker.js"></script>
+  </body>
+</html>
