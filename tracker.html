@@ -22,8 +22,12 @@
       </a>
       <a href="./tracker.html" class="navbar-brand"> Covid Live Tracker</a>
     </nav>
-    
-    <iframe src="https://ourworldindata.org/grapher/covid-confirmed-daily-cases-epidemiological-trajectory?tab=table" loading="lazy" style="width: 100%; height: 600px; border: 0px none;"></iframe>
+
+    <iframe
+      src="https://ourworldindata.org/grapher/covid-confirmed-daily-cases-epidemiological-trajectory?tab=table"
+      loading="lazy"
+      style="width: 100%; height: 600px; border: 0px none;"
+    ></iframe>
     <div class="tracker pt-4 rounded container">
       <div class="layer1 text-center">
         <select
@@ -31,11 +35,6 @@
           id="select-country"
           onchange="select();"
         ></select>
-      </div>
-      <div class="layer2 text-center">
-        <div class="last-updated">
-          <span class="last-updated"></span>
-        </div>
       </div>
       <div class="layer3 text-center">
         <div class="data row">
@@ -59,80 +58,698 @@
           </div>
           <div class="col-md-2"></div>
           <div class="dead col-md-3 card py-3">
-            <h4>Total Dead</h4>
+            <h4>Total Deaths</h4>
             <span id="dead"></span>
           </div>
-          <br>
-          <br>
+        </div>
+        <div class="layer4">
           <h1><u>Vaccine Tracker</u></h1>
           <div class="table-responsive">
-          <div id="vax_wrapper" class="dataTables_wrapper no-footer">
-            <div class="dataTables_length" id="vax_length">
-              <label>Show <select name="vax_length" aria-controls="vax" class="">
-                <option value="10">10</option>
-                <option value="25">25</option>
-                <option value="50">50</option>
-                <option value="100">100</option>
-                </select> 
-                entries
-              </label>
+            <div id="vax_wrapper" class="dataTables_wrapper no-footer">
+              <div class="dataTables_length" id="vax_length">
+                <label
+                  >Show
+                  <select name="vax_length" aria-controls="vax" class="">
+                    <option value="10">10</option>
+                    <option value="25">25</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                  </select>
+                  entries
+                </label>
+              </div>
+              <div id="vax_filter" class="dataTables_filter">
+                <label
+                  >Search:
+                  <input
+                    type="search"
+                    class=""
+                    placeholder=""
+                    aria-controls="vax"
+                  />
+                </label>
+              </div>
+              <table
+                class="display dataTable no-footer"
+                id="vax"
+                style="width: 100%;"
+                role="grid"
+                aria-describedby="vax_info"
+              >
+                <thead>
+                  <tr role="row">
+                    <th
+                      class="details-control sorting_disabled"
+                      rowspan="1"
+                      colspan="1"
+                      aria-label=""
+                      style="width: 1px;"
+                    ></th>
+                    <th
+                      class="sorting_asc"
+                      tabindex="0"
+                      aria-controls="vax"
+                      rowspan="1"
+                      colspan="1"
+                      aria-label="Candidate: activate to sort column descending"
+                      style="width: 84px;"
+                      aria-sort="ascending"
+                    >
+                      Candidate
+                    </th>
+                    <th
+                      class="sorting_asc"
+                      tabindex="0"
+                      aria-controls="vax"
+                      rowspan="1"
+                      colspan="1"
+                      aria-label="Sponsor: activate to sort column ascending"
+                      style="width: 131px;"
+                    >
+                      Sponsor
+                    </th>
+                    <th
+                      class="sorting"
+                      tabindex="0"
+                      aria-controls="vax"
+                      rowspan="1"
+                      colspan="1"
+                      aria-label="Trial Phase: activate to sort column ascending"
+                      style="width: 89px;"
+                    >
+                      <nobr>Trial Phase</nobr>
+                    </th>
+                    <th
+                      class="sorting"
+                      tabindex="0"
+                      aria-controls="vax"
+                      rowspan="1"
+                      colspan="1"
+                      aria-label="Institution: activate to sort column ascending"
+                      style="width: 131px;"
+                    >
+                      Institution
+                    </th>
+                    <th
+                      class="sorting"
+                      tabindex="0"
+                      aria-controls="vax"
+                      rowspan="1"
+                      colspan="1"
+                      aria-label="Funding: activate to sort column ascending"
+                      style="width: 66px;"
+                    >
+                      Funding
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr role="row" class="odd">
+                    <td class="details-control"></td>
+                    <td class="sorting_1">AAVCOVID</td>
+                    <td class="sorting_2">
+                      Massachusetts Eye and Ear; Massachusetts General Hospital;
+                      University of Pennsylvania
+                    </td>
+                    <td>Pre-clinical</td>
+                    <td></td>
+                    <td>Wyc Grousbeck; Emilia Fazzalari</td>
+                  </tr>
+                  <tr role="row" class="even">
+                    <td class="details-control"></td>
+                    <td class="sorting_1">Ad26.COV2-S</td>
+                    <td class="sorting_2">
+                      <a href="https://www.jnj.com/">Johnson &amp; Johnson</a>
+                    </td>
+                    <td>Pre-clinical</td>
+                    <td>
+                      <a href="https://www.jnj.com/">Johnson &amp; Johnson</a>
+                    </td>
+                    <td>
+                      Operation Warp Speed;
+                      <a href="https://www.jnj.com/">Johnson &amp; Johnson</a>;
+                      <a
+                        href="https://www.phe.gov/about/barda/Pages/default.aspx"
+                        >BARDA</a
+                      >
+                    </td>
+                  </tr>
+                  <tr role="row" class="odd">
+                    <td class="details-control"></td>
+                    <td class="sorting_1">Ad5-nCoV</td>
+                    <td class="sorting_2">
+                      <a href="http://www.cansinotech.com/"
+                        >CanSino Biologics</a
+                      >
+                    </td>
+                    <td>Phase 1</td>
+                    <td>
+                      <a href="https://english.tjh.com.cn/">Tongji Hospital</a>;
+                      Wuhan, China
+                    </td>
+                    <td>
+                      <a href="http://www.cansinotech.com/"
+                        >CanSino Biologics</a
+                      >
+                    </td>
+                  </tr>
+                  <tr role="row" class="even">
+                    <td class="details-control"></td>
+                    <td class="sorting_1">AdCOVID</td>
+                    <td class="sorting_2">
+                      <a href="https://altimmune.com/">Altimmune</a>
+                    </td>
+                    <td>Pre-clinical</td>
+                    <td>
+                      <a href="https://www.uab.edu/home/"
+                        >University of Alabama at Birmingham</a
+                      >
+                    </td>
+                    <td><a href="https://altimmune.com/">Altimmune</a></td>
+                  </tr>
+                  <tr role="row" class="odd">
+                    <td class="details-control"></td>
+                    <td class="sorting_1">Adenovirus-based vaccine</td>
+                    <td class="sorting_2">
+                      <a href="https://immunitybio.com/">ImmunityBio</a>;
+                      <a href="https://nantkwest.com/">NantKwest</a>
+                    </td>
+                    <td>Pre-clinical</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr role="row" class="even">
+                    <td class="details-control"></td>
+                    <td class="sorting_1">Adenovirus-based vaccine</td>
+                    <td class="sorting_2">
+                      <a href="https://www.reithera.com/">ReiThera</a>;&nbsp;<a
+                        href="https://www.leukocare.com/"
+                        >Leukocare</a
+                      >;&nbsp;<a href="https://www.univercells.com/"
+                        >Univercells</a
+                      >
+                    </td>
+                    <td>Early research</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr role="row" class="odd">
+                    <td class="details-control"></td>
+                    <td class="sorting_1">AZD1222</td>
+                    <td class="sorting_2">
+                      <a href="https://www.ovg.ox.ac.uk/"
+                        >The University of Oxford</a
+                      >
+                    </td>
+                    <td>Phase 2/3</td>
+                    <td>
+                      <a href="https://www.ovg.ox.ac.uk/"
+                        >The University of Oxford</a
+                      >,&nbsp;<a
+                        href="https://www.ndm.ox.ac.uk/the-jenner-institute"
+                        >the Jenner Institute</a
+                      >
+                    </td>
+                    <td>
+                      Operation Warp Speed; UK Ministry of Health;
+                      <a href="https://www.ovg.ox.ac.uk/"
+                        >The University of Oxford</a
+                      >;
+                      <a
+                        href="https://www.phe.gov/about/barda/Pages/default.aspx"
+                        >BARDA</a
+                      >
+                    </td>
+                  </tr>
+                  <tr role="row" class="even">
+                    <td class="details-control"></td>
+                    <td class="sorting_1">
+                      Bacillus Calmette-Guerin (BCG) live-attenuated vaccine
+                    </td>
+                    <td class="sorting_2">
+                      <a href="https://www.mcri.edu.au/"
+                        >University of Melbourne and Murdoch Children’s Research
+                        Institute</a
+                      >;&nbsp;<a
+                        href="https://www.radboudumc.nl/en/patient-care"
+                        >Radboud University Medical Center</a
+                      >;&nbsp;<a href="https://www.faustmanlab.org/"
+                        >Faustman Lab at Massachusetts General Hospital</a
+                      >
+                    </td>
+                    <td>Phase 2/3</td>
+                    <td>
+                      <a href="https://www.mcri.edu.au/"
+                        >University of Melbourne and Murdoch Children’s Research
+                        Institute</a
+                      >;&nbsp;<a
+                        href="https://www.radboudumc.nl/en/patient-care"
+                        >Radboud University Medical Center</a
+                      >;&nbsp;<a href="https://www.faustmanlab.org/"
+                        >Faustman Lab at Massachusetts General Hospital</a
+                      >
+                    </td>
+                    <td>
+                      <a href="https://www.mcri.edu.au/"
+                        >Murdoch Children’s Research Institute</a
+                      >; <a href="https://www.umcutrecht.nl/">UMC Utrecht</a>
+                    </td>
+                  </tr>
+                  <tr role="row" class="odd">
+                    <td class="details-control"></td>
+                    <td class="sorting_1">bacTRL-Spike</td>
+                    <td class="sorting_2">
+                      <a href="https://www.symvivo.com/">Symvivo</a>
+                    </td>
+                    <td>Pre-clinical</td>
+                    <td>
+                      <a href="https://www.symvivo.com/">Symvivo Corporation</a>
+                    </td>
+                    <td>
+                      <a href="https://www.symvivo.com/">Symvivo Corporation</a>
+                    </td>
+                  </tr>
+                  <tr role="row" class="even">
+                    <td class="details-control"></td>
+                    <td class="sorting_1">BBIBP-CorV</td>
+                    <td class="sorting_2">
+                      Beijing Institute of Biological Products;
+                      <a href="http://www.sinopharm.com/1156.html"
+                        >China National Pharmaceutical Group (Sinopharm)</a
+                      >
+                    </td>
+                    <td>Phase 1/2</td>
+                    <td>
+                      Henan Provincial Center for Disease Control and Prevention
+                    </td>
+                    <td>
+                      <a href="http://www.most.gov.cn/eng/eng/index.htm"
+                        >Ministry of Science and Technology, China</a
+                      >
+                    </td>
+                  </tr>
+                  <tr role="row" class="odd">
+                    <td class="details-control"></td>
+                    <td class="sorting_1">BNT162</td>
+                    <td class="sorting_2">
+                      <a href="https://www.pfizer.com/">Pfizer</a>,
+                      <a href="https://biontech.de/">BioNTech</a>
+                    </td>
+                    <td>Phase 1/2</td>
+                    <td>Multiple study sites in Europe</td>
+                    <td>
+                      <a href="https://www.pfizer.com/">Pfizer</a>;
+                      <a href="https://biontech.de/">BioNTech</a>
+                    </td>
+                  </tr>
+                  <tr role="row" class="even">
+                    <td class="details-control"></td>
+                    <td class="sorting_1">CoronaVac</td>
+                    <td class="sorting_2">
+                      <a href="http://www.sinovac.com/">Sinovac</a>
+                    </td>
+                    <td>Phase 1/2</td>
+                    <td>
+                      <a href="http://www.sinovac.com/?optionid=440"
+                        >Sinovac Research and Development Co., Ltd.</a
+                      >
+                    </td>
+                    <td>
+                      <a href="http://www.sinovac.com/?optionid=440"
+                        >Sinovac Research and Development Co., Ltd.</a
+                      >
+                    </td>
+                  </tr>
+                  <tr role="row" class="odd">
+                    <td class="details-control"></td>
+                    <td class="sorting_1">
+                      COVID-19 S-Trimer with various adjuvant candidates
+                    </td>
+                    <td class="sorting_2">
+                      <a href="https://www.gsk.com/">GlaxoSmithKline</a
+                      >,&nbsp;<a href="https://www.sanofi.com/">Sanofi</a
+                      >,&nbsp;<a href="http://www.cloverbiopharma.com/"
+                        >Clover Biopharmaceuticals</a
+                      >&nbsp;and Xiamen Innovax
+                    </td>
+                    <td>Early research</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr role="row" class="even">
+                    <td class="details-control"></td>
+                    <td class="sorting_1">DNA-based vaccine</td>
+                    <td class="sorting_2">
+                      <a href="http://www.takisbiotech.it/index.php/en/"
+                        >Takis Biotech</a
+                      >
+                    </td>
+                    <td>Pre-clinical</td>
+                    <td>
+                      <a href="http://www.takisbiotech.it/index.php/en/"
+                        >Takis Biotech</a
+                      >
+                    </td>
+                    <td>
+                      <a href="http://www.takisbiotech.it/index.php/en/"
+                        >Takis Biotech</a
+                      >
+                    </td>
+                  </tr>
+                  <tr role="row" class="odd">
+                    <td class="details-control"></td>
+                    <td class="sorting_1">gp96-based vaccine</td>
+                    <td class="sorting_2">
+                      <a href="https://www.heatbio.com/">Heat Biologics</a>
+                    </td>
+                    <td>Early research</td>
+                    <td>
+                      <a href="https://med.miami.edu/"
+                        >University of Miami Miller School of Medicine</a
+                      >
+                    </td>
+                    <td></td>
+                  </tr>
+                  <tr role="row" class="even">
+                    <td class="details-control"></td>
+                    <td class="sorting_1">Ii-Key peptide COVID-19 vaccine</td>
+                    <td class="sorting_2">
+                      <a href="https://www.generex.com/"
+                        >Generex Biotechnology</a
+                      >
+                    </td>
+                    <td>Pre-clinical</td>
+                    <td><a href="https://www.generex.com/">Generex</a></td>
+                    <td><a href="https://www.generex.com/">Generex</a></td>
+                  </tr>
+                  <tr role="row" class="odd">
+                    <td class="details-control"></td>
+                    <td class="sorting_1">Inactivated vaccine</td>
+                    <td class="sorting_2">
+                      <a href="http://www.wibp.com.cn/ChsMobile/Default.aspx"
+                        >Wuhan Institute of Biological Products</a
+                      >;
+                      <a href="http://www.sinopharm.com/1156.html"
+                        >China National Pharmaceutical Group (Sinopharm)</a
+                      >
+                    </td>
+                    <td>Phase 1/2</td>
+                    <td>
+                      Henan Provincial Center for Disease Control and Prevention
+                    </td>
+                    <td>
+                      <a href="http://www.most.gov.cn/eng/eng/index.htm"
+                        >Ministry of Science and Technology, China</a
+                      >
+                    </td>
+                  </tr>
+                  <tr role="row" class="even">
+                    <td class="details-control"></td>
+                    <td class="sorting_1">INO-4800</td>
+                    <td class="sorting_2">
+                      <a href="https://www.inovio.com/"
+                        >Inovio Pharmaceuticals</a
+                      >
+                    </td>
+                    <td>Phase 1</td>
+                    <td>
+                      <a href="http://cprkc.com/"
+                        >Center for Pharmaceutical Research</a
+                      >, Kansas City. Mo.;
+                      <a href="https://www.upenn.edu/"
+                        >University of Pennsylvania</a
+                      >, Philadelphia
+                    </td>
+                    <td>
+                      <a href="https://www.inovio.com/"
+                        >Inovio Pharmaceuticals</a
+                      >
+                    </td>
+                  </tr>
+                  <tr role="row" class="odd">
+                    <td class="details-control"></td>
+                    <td class="sorting_1">LUNAR-COV19</td>
+                    <td class="sorting_2">
+                      <a href="https://arcturusrx.com/">Arcturus Therapeutics</a
+                      >&nbsp;and&nbsp;<a href="https://www.duke-nus.edu.sg/"
+                        >Duke-NUS Medical School</a
+                      >
+                    </td>
+                    <td>Pre-clinical</td>
+                    <td>
+                      <a href="https://www.duke-nus.edu.sg/"
+                        >Duke-NUS Medical School</a
+                      >, Singapore
+                    </td>
+                    <td><a href="https://arcturusrx.com/">Arcturus</a></td>
+                  </tr>
+                  <tr role="row" class="even">
+                    <td class="details-control"></td>
+                    <td class="sorting_1">Measles vector vaccine</td>
+                    <td class="sorting_2">
+                      <a href="https://cvr.pitt.edu/"
+                        >University of Pittsburgh’s Center for Vaccine
+                        Research</a
+                      >
+                    </td>
+                    <td>Pre-clinical</td>
+                    <td>
+                      <a href="https://www.pitt.edu/"
+                        >University of Pittsburgh</a
+                      >;
+                      <a href="https://www.themisbio.com/">Themis Biosciences</a
+                      >;
+                      <a href="https://www.pasteur.fr/en/institut-pasteur"
+                        >Institut Pasteur</a
+                      >
+                    </td>
+                    <td>
+                      <a href="https://www.merck.com/index.html">Merck</a>
+                    </td>
+                  </tr>
+                  <tr role="row" class="odd">
+                    <td class="details-control"></td>
+                    <td class="sorting_1">Molecular clamp vaccine</td>
+                    <td class="sorting_2">CSL; The University of Queensland</td>
+                    <td>Pre-clinical</td>
+                    <td></td>
+                    <td>
+                      <a href="https://cepi.net/">CEPI</a>;
+                      <a href="https://www.cslbehring.com/">CSL</a>
+                    </td>
+                  </tr>
+                  <tr role="row" class="even">
+                    <td class="details-control"></td>
+                    <td class="sorting_1">
+                      mRNA lipid nanoparticle (mRNA-LNP) vaccine
+                    </td>
+                    <td class="sorting_2">
+                      <a href="http://www.cansinotech.com/">CanSino Biologics</a
+                      >,
+                      <a href="https://www.precisionnanosystems.com/"
+                        >Precision NanoSystems</a
+                      >
+                    </td>
+                    <td>Early research</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr role="row" class="odd">
+                    <td class="details-control"></td>
+                    <td class="sorting_1">mRNA-1273</td>
+                    <td class="sorting_2">
+                      <a href="https://www.modernatx.com/">Moderna</a>
+                    </td>
+                    <td>Phase 2</td>
+                    <td>
+                      <a
+                        href="https://www.kpwashingtonresearch.org/news-and-events/recent-news/news-2020/kaiser-permanente-launches-coronavirus-vaccine-study-seattle"
+                        >Kaiser Permanente Washington Health Research
+                        Institute</a
+                      >
+                    </td>
+                    <td>
+                      Operation Warp Speed;
+                      <a href="https://www.niaid.nih.gov/">NIAID</a>,
+                      <a
+                        href="https://www.phe.gov/about/barda/Pages/default.aspx"
+                        >BARDA</a
+                      >
+                      ($483 million)
+                    </td>
+                  </tr>
+                  <tr role="row" class="even">
+                    <td class="details-control"></td>
+                    <td class="sorting_1">mRNA-based vaccine</td>
+                    <td class="sorting_2">
+                      <a href="https://www.curevac.com/">CureVac</a>
+                    </td>
+                    <td>Phase 1</td>
+                    <td><a href="https://www.curevac.com/">CureVac</a></td>
+                    <td>
+                      <a href="https://www.curevac.com/">CureVac</a>; German
+                      federal government
+                    </td>
+                  </tr>
+                  <tr role="row" class="odd">
+                    <td class="details-control"></td>
+                    <td class="sorting_1">NVX-CoV2373</td>
+                    <td class="sorting_2">
+                      <a href="https://novavax.com/">Novavax</a>
+                    </td>
+                    <td>Pre-clinical</td>
+                    <td><a href="https://novavax.com/">Novavax</a></td>
+                    <td>
+                      <a href="https://novavax.com/">Novavax</a>,
+                      <a href="https://cepi.net/">CEPI</a>, Department of
+                      Defense ($60 million)
+                    </td>
+                  </tr>
+                  <tr role="row" class="even">
+                    <td class="details-control"></td>
+                    <td class="sorting_1">PittCoVacc</td>
+                    <td class="sorting_2">
+                      <a href="https://www.upmc.com/coronavirus/vaccine"
+                        >UPMC/University of Pittsburgh School of Medicine</a
+                      >
+                    </td>
+                    <td>Pre-clinical</td>
+                    <td>
+                      <a href="https://www.pitt.edu/"
+                        >University of Pittsburgh</a
+                      >
+                    </td>
+                    <td><a href="https://cepi.net/">CEPI</a></td>
+                  </tr>
+                  <tr role="row" class="odd">
+                    <td class="details-control"></td>
+                    <td class="sorting_1">Plant-based COVID-19 vaccine</td>
+                    <td class="sorting_2">
+                      <a href="https://www.medicago.com/en/">Medicago</a>
+                    </td>
+                    <td>Pre-clinical</td>
+                    <td><a href="https://www.medicago.com/en/">Medicago</a></td>
+                    <td><a href="https://www.medicago.com/en/">Medicago</a></td>
+                  </tr>
+                  <tr role="row" class="even">
+                    <td class="details-control"></td>
+                    <td class="sorting_1">Protein subunit vaccine</td>
+                    <td class="sorting_2">
+                      <a href="https://www.vido.org/"
+                        >University of Saskatchewan Vaccine and Infectious
+                        Disease Organization-International Vaccine Centre</a
+                      >
+                    </td>
+                    <td>Pre-clinical</td>
+                    <td>
+                      <a href="https://www.vido.org/"
+                        >University of Saskatchewan Vaccine and Infectious
+                        Disease Organization-International Vaccine Centre</a
+                      >
+                    </td>
+                    <td>no information</td>
+                  </tr>
+                  <tr role="row" class="odd">
+                    <td class="details-control"></td>
+                    <td class="sorting_1">Recombinant vaccine</td>
+                    <td class="sorting_2">
+                      <a href="https://vaxart.com/">Vaxart</a>
+                    </td>
+                    <td>Pre-clinical</td>
+                    <td><a href="https://vaxart.com/">Vaxart</a></td>
+                    <td>no information</td>
+                  </tr>
+                  <tr role="row" class="even">
+                    <td class="details-control"></td>
+                    <td class="sorting_1">
+                      Recombinant vesicular stomatitis virus (rVSV) vaccine
+                    </td>
+                    <td class="sorting_2">
+                      <a href="https://www.merck.com/index.html">Merck</a>;
+                      <a href="https://www.iavi.org/">IAVI</a>
+                    </td>
+                    <td>Pre-clinical</td>
+                    <td></td>
+                    <td>
+                      <a
+                        href="https://www.phe.gov/about/barda/Pages/default.aspx"
+                        >BARDA</a
+                      >
+                    </td>
+                  </tr>
+                  <tr role="row" class="odd">
+                    <td class="details-control"></td>
+                    <td class="sorting_1">Self-amplifying RNA vaccine</td>
+                    <td class="sorting_2">
+                      <a href="https://www.imperial.ac.uk/"
+                        >Imperial College London</a
+                      >
+                    </td>
+                    <td>Pre-clinical</td>
+                    <td>
+                      <a
+                        href='“https://www.imperial.ac.uk/covid-19-vaccine-trial/"'
+                        >Imperial College London</a
+                      >
+                    </td>
+                    <td>
+                      UK Secretary of State for Health; UK Secretary of State
+                      for Business, Energy and Industrial Strategy
+                    </td>
+                  </tr>
+                  <tr role="row" class="even">
+                    <td class="details-control"></td>
+                    <td class="sorting_1">T-COVIDTM</td>
+                    <td class="sorting_2">
+                      <a href="https://altimmune.com/">Altimmune</a>
+                    </td>
+                    <td>Pre-clinical</td>
+                    <td></td>
+                    <td><a href="https://altimmune.com/">Altimmune</a></td>
+                  </tr>
+                </tbody>
+              </table>
+              <div
+                class="dataTables_info"
+                id="vax_info"
+                role="status"
+                aria-live="polite"
+              >
+                Showing 1 to 32 of 32 entries
+              </div>
+              <div
+                class="dataTables_paginate paging_simple_numbers"
+                id="vax_paginate"
+              >
+                <a
+                  class="paginate_button previous disabled"
+                  aria-controls="vax"
+                  data-dt-idx="0"
+                  tabindex="-1"
+                  id="vax_previous"
+                  >Previous</a
+                ><span
+                  ><a
+                    class="paginate_button current"
+                    aria-controls="vax"
+                    data-dt-idx="1"
+                    tabindex="0"
+                    >1</a
+                  ></span
+                ><a
+                  class="paginate_button next disabled"
+                  aria-controls="vax"
+                  data-dt-idx="2"
+                  tabindex="-1"
+                  id="vax_next"
+                  >Next</a
+                >
+              </div>
             </div>
-            <div id="vax_filter" class="dataTables_filter">
-              <label>Search:
-                <input type="search" class="" placeholder="" aria-controls="vax">
-              </label>
-            </div>
-            <table class="display dataTable no-footer" id="vax" style="width: 100%;" role="grid" aria-describedby="vax_info">
-<thead>
-  <tr role="row">
-  <th class="details-control sorting_disabled" rowspan="1" colspan="1" aria-label="" style="width: 1px;">
-    </th>
-    <th class="sorting_asc" tabindex="0" aria-controls="vax" rowspan="1" colspan="1" aria-label="Candidate: activate to sort column descending" style="width: 84px;" aria-sort="ascending">Candidate</th>
-    <th class="sorting_asc" tabindex="0" aria-controls="vax" rowspan="1" colspan="1" aria-label="Sponsor: activate to sort column ascending" style="width: 131px;">Sponsor</th>
-    <th class="sorting" tabindex="0" aria-controls="vax" rowspan="1" colspan="1" aria-label="Trial Phase: activate to sort column ascending" style="width: 89px;"><nobr>Trial Phase</nobr></th>
-    <th class="sorting" tabindex="0" aria-controls="vax" rowspan="1" colspan="1" aria-label="Institution: activate to sort column ascending" style="width: 131px;">Institution</th>
-    <th class="sorting" tabindex="0" aria-controls="vax" rowspan="1" colspan="1" aria-label="Funding: activate to sort column ascending" style="width: 66px;">Funding</th>
-  </tr>
-              </thead>
-              <tbody>
-                <tr role="row" class="odd">
-                  <td class=" details-control"></td>
-                  <td class="sorting_1">AAVCOVID</td>
-                  <td class="sorting_2">Massachusetts Eye and Ear; Massachusetts General Hospital; University of Pennsylvania</td>
-                  <td>Pre-clinical</td><td></td><td>Wyc Grousbeck; Emilia Fazzalari</td>
-                </tr>
-                <tr role="row" class="even">
-                  <td class=" details-control">
-                  </td>
-                  <td class="sorting_1">Ad26.COV2-S</td><td class="sorting_2"><a href="https://www.jnj.com/">Johnson &amp; Johnson</a></td>
-                  <td>Pre-clinical</td><td><a href="https://www.jnj.com/">Johnson &amp; Johnson</a></td>
-                  <td>Operation Warp Speed; <a href="https://www.jnj.com/">Johnson &amp; Johnson</a>; <a href="https://www.phe.gov/about/barda/Pages/default.aspx">BARDA</a></td>
-                </tr>
-                <tr role="row" class="odd">
-                  <td class=" details-control"></td>
-                  <td class="sorting_1">Ad5-nCoV</td>
-                  <td class="sorting_2"><a href="http://www.cansinotech.com/">CanSino Biologics</a></td>
-                  <td>Phase 1</td><td><a href="https://english.tjh.com.cn/">Tongji Hospital</a>; Wuhan, China</td>
-                  <td><a href="http://www.cansinotech.com/">CanSino Biologics</a></td>
-                </tr>
-                <tr role="row" class="even"><td class=" details-control"></td>
-                  <td class="sorting_1">AdCOVID</td><td class="sorting_2"><a href="https://altimmune.com/">Altimmune</a></td>
-                  <td>Pre-clinical</td><td><a href="https://www.uab.edu/home/">University of Alabama at Birmingham</a></td>
-                  <td><a href="https://altimmune.com/">Altimmune</a></td>
-                </tr>
-                <tr role="row" class="odd">
-                  <td class=" details-control"></td>
-                  <td class="sorting_1">Adenovirus-based vaccine</td>
-                  <td class="sorting_2"><a href="https://immunitybio.com/">ImmunityBio</a>; <a href="https://nantkwest.com/">NantKwest</a></td>
-                  <td>Pre-clinical</td><td></td><td></td></tr><tr role="row" class="even"><td class=" details-control"></td><td class="sorting_1">Adenovirus-based vaccine</td><td class="sorting_2"><a href="https://www.reithera.com/">ReiThera</a>;&nbsp;<a href="https://www.leukocare.com/">Leukocare</a>;&nbsp;<a href="https://www.univercells.com/">Univercells</a></td><td>Early research</td><td></td><td></td></tr><tr role="row" class="odd"><td class=" details-control"></td><td class="sorting_1">AZD1222</td><td class="sorting_2"><a href="https://www.ovg.ox.ac.uk/">The University of Oxford</a></td><td>Phase 2/3</td><td><a href="https://www.ovg.ox.ac.uk/">The University of Oxford</a>,&nbsp;<a href="https://www.ndm.ox.ac.uk/the-jenner-institute">the Jenner Institute</a></td><td>Operation Warp Speed; UK Ministry of Health; <a href="https://www.ovg.ox.ac.uk/">The University of Oxford</a>; <a href="https://www.phe.gov/about/barda/Pages/default.aspx">BARDA</a></td></tr><tr role="row" class="even"><td class=" details-control"></td><td class="sorting_1">Bacillus Calmette-Guerin (BCG) live-attenuated vaccine</td><td class="sorting_2"><a href="https://www.mcri.edu.au/">University of Melbourne and Murdoch Children’s Research Institute</a>;&nbsp;<a href="https://www.radboudumc.nl/en/patient-care">Radboud University Medical Center</a>;&nbsp;<a href="https://www.faustmanlab.org/">Faustman Lab at Massachusetts General Hospital</a></td><td>Phase 2/3</td><td><a href="https://www.mcri.edu.au/">University of Melbourne and Murdoch Children’s Research Institute</a>;&nbsp;<a href="https://www.radboudumc.nl/en/patient-care">Radboud University Medical Center</a>;&nbsp;<a href="https://www.faustmanlab.org/">Faustman Lab at Massachusetts General Hospital</a></td><td><a href="https://www.mcri.edu.au/">Murdoch Children’s Research Institute</a>; <a href="https://www.umcutrecht.nl/">UMC Utrecht</a></td></tr><tr role="row" class="odd"><td class=" details-control"></td><td class="sorting_1">bacTRL-Spike</td><td class="sorting_2"><a href="https://www.symvivo.com/">Symvivo</a></td><td>Pre-clinical</td><td><a href="https://www.symvivo.com/">Symvivo Corporation</a></td><td><a href="https://www.symvivo.com/">Symvivo Corporation</a></td></tr><tr role="row" class="even"><td class=" details-control"></td><td class="sorting_1">BBIBP-CorV</td><td class="sorting_2">Beijing Institute of Biological Products; <a href="http://www.sinopharm.com/1156.html">China National Pharmaceutical Group (Sinopharm)</a></td><td>Phase 1/2</td><td>Henan Provincial Center for Disease Control and Prevention</td><td><a href="http://www.most.gov.cn/eng/eng/index.htm">Ministry of Science and Technology, China</a></td></tr><tr role="row" class="odd"><td class=" details-control"></td><td class="sorting_1">BNT162</td><td class="sorting_2"><a href="https://www.pfizer.com/">Pfizer</a>, <a href="https://biontech.de/">BioNTech</a></td><td>Phase 1/2</td><td>Multiple study sites in Europe</td><td><a href="https://www.pfizer.com/">Pfizer</a>; <a href="https://biontech.de/">BioNTech</a></td></tr><tr role="row" class="even"><td class=" details-control"></td><td class="sorting_1">CoronaVac</td><td class="sorting_2"><a href="http://www.sinovac.com/">Sinovac</a></td><td>Phase 1/2</td><td><a href="http://www.sinovac.com/?optionid=440">Sinovac Research and Development Co., Ltd.</a></td><td><a href="http://www.sinovac.com/?optionid=440">Sinovac Research and Development Co., Ltd.</a></td></tr><tr role="row" class="odd"><td class=" details-control"></td><td class="sorting_1">COVID-19 S-Trimer with various adjuvant candidates</td><td class="sorting_2"><a href="https://www.gsk.com/">GlaxoSmithKline</a>,&nbsp;<a href="https://www.sanofi.com/">Sanofi</a>,&nbsp;<a href="http://www.cloverbiopharma.com/">Clover Biopharmaceuticals</a>&nbsp;and Xiamen Innovax</td><td>Early research</td><td></td><td></td></tr><tr role="row" class="even"><td class=" details-control"></td><td class="sorting_1">DNA-based vaccine</td><td class="sorting_2"><a href="http://www.takisbiotech.it/index.php/en/">Takis Biotech</a></td><td>Pre-clinical</td><td><a href="http://www.takisbiotech.it/index.php/en/">Takis Biotech</a></td><td><a href="http://www.takisbiotech.it/index.php/en/">Takis Biotech</a></td></tr><tr role="row" class="odd"><td class=" details-control"></td><td class="sorting_1">gp96-based vaccine</td><td class="sorting_2"><a href="https://www.heatbio.com/">Heat Biologics</a></td><td>Early research</td><td><a href="https://med.miami.edu/">University of Miami Miller School of Medicine</a></td><td>
-</td>
-              </tr>
-              <tr role="row" class="even"><td class=" details-control"></td><td class="sorting_1">Ii-Key peptide COVID-19 vaccine</td><td class="sorting_2"><a href="https://www.generex.com/">Generex Biotechnology</a></td><td>Pre-clinical</td><td><a href="https://www.generex.com/">Generex</a></td><td><a href="https://www.generex.com/">Generex</a></td></tr><tr role="row" class="odd"><td class=" details-control"></td><td class="sorting_1">Inactivated vaccine</td><td class="sorting_2"><a href="http://www.wibp.com.cn/ChsMobile/Default.aspx">Wuhan Institute of Biological Products</a>; <a href="http://www.sinopharm.com/1156.html">China National Pharmaceutical Group (Sinopharm)</a></td><td>Phase 1/2</td><td>Henan Provincial Center for Disease Control and Prevention</td><td><a href="http://www.most.gov.cn/eng/eng/index.htm">Ministry of Science and Technology, China</a></td></tr><tr role="row" class="even"><td class=" details-control"></td><td class="sorting_1">INO-4800</td><td class="sorting_2"><a href="https://www.inovio.com/">Inovio  Pharmaceuticals</a></td><td>Phase 1</td><td><a href="http://cprkc.com/">Center for Pharmaceutical Research</a>, Kansas City. Mo.; <a href="https://www.upenn.edu/">University of Pennsylvania</a>, Philadelphia</td><td><a href="https://www.inovio.com/">Inovio Pharmaceuticals</a></td></tr><tr role="row" class="odd"><td class=" details-control"></td><td class="sorting_1">LUNAR-COV19</td><td class="sorting_2"><a href="https://arcturusrx.com/">Arcturus Therapeutics</a>&nbsp;and&nbsp;<a href="https://www.duke-nus.edu.sg/">Duke-NUS Medical School</a></td><td>Pre-clinical</td><td><a href="https://www.duke-nus.edu.sg/">Duke-NUS Medical School</a>, Singapore</td><td><a href="https://arcturusrx.com/">Arcturus</a></td></tr><tr role="row" class="even"><td class=" details-control"></td><td class="sorting_1">Measles vector vaccine</td><td class="sorting_2"><a href="https://cvr.pitt.edu/">University of Pittsburgh’s Center for Vaccine Research</a></td><td>Pre-clinical</td><td><a href="https://www.pitt.edu/">University of Pittsburgh</a>; <a href="https://www.themisbio.com/">Themis Biosciences</a>; <a href="https://www.pasteur.fr/en/institut-pasteur">Institut Pasteur</a></td><td><a href="https://www.merck.com/index.html">Merck</a></td></tr><tr role="row" class="odd"><td class=" details-control"></td><td class="sorting_1">Molecular clamp vaccine</td><td class="sorting_2">CSL; The University of Queensland</td><td>Pre-clinical</td><td></td><td><a href="https://cepi.net/">CEPI</a>; <a href="https://www.cslbehring.com/">CSL</a></td></tr><tr role="row" class="even"><td class=" details-control"></td><td class="sorting_1">mRNA lipid nanoparticle (mRNA-LNP) vaccine</td><td class="sorting_2"><a href="http://www.cansinotech.com/">CanSino Biologics</a>, <a href="https://www.precisionnanosystems.com/">Precision NanoSystems</a></td><td>Early research</td><td></td><td></td></tr><tr role="row" class="odd"><td class=" details-control"></td><td class="sorting_1">mRNA-1273</td><td class="sorting_2"><a href="https://www.modernatx.com/">Moderna</a></td><td>Phase 2</td><td><a href="https://www.kpwashingtonresearch.org/news-and-events/recent-news/news-2020/kaiser-permanente-launches-coronavirus-vaccine-study-seattle">Kaiser Permanente Washington Health Research Institute</a></td><td>Operation Warp Speed; <a href="https://www.niaid.nih.gov/">NIAID</a>, <a href="https://www.phe.gov/about/barda/Pages/default.aspx">BARDA</a> ($483 million)</td></tr><tr role="row" class="even"><td class=" details-control"></td><td class="sorting_1">mRNA-based vaccine</td><td class="sorting_2"><a href="https://www.curevac.com/">CureVac</a></td><td>Phase 1</td><td><a href="https://www.curevac.com/">CureVac</a></td><td><a href="https://www.curevac.com/">CureVac</a>; German federal government</td></tr><tr role="row" class="odd"><td class=" details-control"></td><td class="sorting_1">NVX-CoV2373</td><td class="sorting_2"><a href="https://novavax.com/">Novavax</a></td><td>Pre-clinical</td><td><a href="https://novavax.com/">Novavax</a></td><td><a href="https://novavax.com/">Novavax</a>, <a href="https://cepi.net/">CEPI</a>, Department of Defense ($60 million)</td></tr><tr role="row" class="even"><td class=" details-control"></td><td class="sorting_1">PittCoVacc</td><td class="sorting_2"><a href="https://www.upmc.com/coronavirus/vaccine">UPMC/University of Pittsburgh School of Medicine</a></td><td>Pre-clinical</td><td><a href="https://www.pitt.edu/">University of Pittsburgh</a></td><td><a href="https://cepi.net/">CEPI</a></td></tr><tr role="row" class="odd"><td class=" details-control"></td><td class="sorting_1">Plant-based COVID-19 vaccine</td><td class="sorting_2"><a href="https://www.medicago.com/en/">Medicago</a></td><td>Pre-clinical</td><td><a href="https://www.medicago.com/en/">Medicago</a></td><td><a href="https://www.medicago.com/en/">Medicago</a></td></tr><tr role="row" class="even"><td class=" details-control"></td><td class="sorting_1">Protein subunit vaccine</td><td class="sorting_2"><a href="https://www.vido.org/">University of Saskatchewan Vaccine and Infectious Disease Organization-International Vaccine Centre</a></td><td>Pre-clinical</td><td><a href="https://www.vido.org/">University of Saskatchewan Vaccine and Infectious Disease Organization-International Vaccine Centre</a></td><td>no information </td></tr><tr role="row" class="odd"><td class=" details-control"></td><td class="sorting_1">Recombinant vaccine</td><td class="sorting_2"><a href="https://vaxart.com/">Vaxart</a></td><td>Pre-clinical</td><td><a href="https://vaxart.com/">Vaxart</a></td><td>no information </td></tr><tr role="row" class="even"><td class=" details-control"></td><td class="sorting_1">Recombinant vesicular stomatitis virus (rVSV) vaccine</td><td class="sorting_2"><a href="https://www.merck.com/index.html">Merck</a>; <a href="https://www.iavi.org/">IAVI</a></td><td>Pre-clinical</td><td></td><td><a href="https://www.phe.gov/about/barda/Pages/default.aspx">BARDA</a></td></tr><tr role="row" class="odd"><td class=" details-control"></td><td class="sorting_1">Self-amplifying RNA vaccine</td><td class="sorting_2"><a href="https://www.imperial.ac.uk/">Imperial College London</a></td><td>Pre-clinical</td><td><a href="“https://www.imperial.ac.uk/covid-19-vaccine-trial/&quot;">Imperial College London</a></td><td>UK Secretary of State for Health; UK Secretary of State for Business, Energy and Industrial Strategy</td></tr><tr role="row" class="even"><td class=" details-control"></td><td class="sorting_1">T-COVIDTM</td><td class="sorting_2"><a href="https://altimmune.com/">Altimmune</a></td><td>Pre-clinical</td><td></td><td><a href="https://altimmune.com/">Altimmune</a></td></tr></tbody></table><div class="dataTables_info" id="vax_info" role="status" aria-live="polite">Showing 1 to 32 of 32 entries</div><div class="dataTables_paginate paging_simple_numbers" id="vax_paginate"><a class="paginate_button previous disabled" aria-controls="vax" data-dt-idx="0" tabindex="-1" id="vax_previous">Previous</a><span><a class="paginate_button current" aria-controls="vax" data-dt-idx="1" tabindex="0">1</a></span><a class="paginate_button next disabled" aria-controls="vax" data-dt-idx="2" tabindex="-1" id="vax_next">Next</a></div></div>
-</div>
+          </div>
           <div class="col-md-2"></div>
         </div>
       </div>
-      <div class="layer4"></div>
     </div>
 
     <!-- script tags -->
